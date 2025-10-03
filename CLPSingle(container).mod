@@ -8,6 +8,7 @@ set L; #Family of cartons
 
 
 ### Parameter of Products
+#nambah sesuatu
 
 param lp {P}; #Length of product p
 param wp {P}; #Width of product p
