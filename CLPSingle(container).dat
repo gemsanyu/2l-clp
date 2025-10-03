@@ -1,0 +1,273 @@
+#Sets
+set P := p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17; 
+set B:= b1 b3 b4 b5 b6 b7 b8 b9 b10 b11 b12 b13 b14 b15 b16 b17 b18 b19 b20 b21 ;
+set F := f1 f3 f4 f5 f6 f7 f11;
+set T := c1 c3 c4 c5 c6 c7 c11;
+set L :=l1 l3 l4 l5 l6 l7 l11;
+#Product dimensions (cm) & weight (gram)
+param WG :=
+	   p1 500
+	   p2 1
+	   p3 2000
+	   p4 160
+	   p5 2480
+	   p6 1
+	   p7 80
+	   p8 80
+	   p9 40
+	   p10 28.7
+	   p11 20
+	   p12 30
+	   p13 50
+	   p14 160
+	   p15 22.22
+	   p16 20
+	   p17 160
+	   ;
+	  
+param lp :=
+	  p1 20
+	  p2 1
+	  p3 48
+	  p4 23
+	  p5 23
+	  p6 1
+	  p7 17
+	  p8 17
+	  p9 22
+	  p10 13
+	  p11 12
+	  p12 3
+	  p13 6
+	  p14 6
+	  p15 15
+	  p16 12
+	  p17 6
+	  ;
+	  
+	  
+param wp :=
+      p1 2
+      p2 1
+      p3 20
+      p4 10
+      p5 19
+      p6 1
+      p7 2 
+      p8 2 
+      p9 7
+      p10 2
+      p11 5
+      p12 3
+      p13 6
+      p14 5
+      p15 7
+      p16 6
+      p17 5
+      ;
+	  
+param hp :=
+      p1 4
+      p2 1
+      p3 47
+      p4 6
+      p5 46
+      p6 1
+      p7 11
+      p8 11
+      p9 3
+      p10 8
+      p11 1
+      p12 11
+      p13 2
+      p14 10
+      p15 23
+      p16 3
+      p17 13
+         ;
+      
+      
+
+	  
+# Carton dimensions (cm) & capacity (gram)
+
+param LB :=
+       b1 50
+       b3 50
+       b4 50
+       b5 50
+       b6 50
+       b7 50
+       b8 50
+       b9 50
+       b10 50
+       b11 50
+       b12 50
+       b13 50
+       b14 50
+       b15 50
+       b16 50
+       b17 50
+       b18 50
+       b19 50
+       b20 50
+       b21 50
+       ;
+       
+param WB :=
+       b1 60
+       b3 60
+       b4 60
+       b5 60
+       b6 60
+       b7 60
+       b8 60
+       b9 60
+       b10 60
+       b11 60
+       b12 60
+       b13 60
+       b14 60
+       b15 60
+       b16 60
+       b17 60
+       b18 60
+       b19 60
+       b20 60
+       b21 60
+       ;
+       
+param HB :=
+       b1 70
+       b3 70
+       b4 70
+       b5 70
+       b6 70
+       b7 70
+       b8 70
+       b9 70
+       b10 70
+       b11 70
+       b12 70
+       b13 70
+       b14 70
+       b15 70
+       b16 70
+       b17 70
+       b18 70
+       b19 70
+       b20 70
+       b21 70
+       ;
+       
+param CB :=
+       b1 5000
+       b3 5000
+       b4 5000
+       b5 5000
+       b6 5000
+       b7 5000
+       b8 5000
+       b9 5000
+       b10 5000
+       b11 5000
+       b12 5000
+       b13 5000
+       b14 5000
+       b15 5000
+       b16 5000
+       b17 5000
+       b18 5000
+       b19 5000
+       b20 5000
+       b21 5000
+       ;
+
+# Container dimension (cm) & capacity (gram)
+param LT:=
+       c1 600
+       c3 600
+       c4 600
+       c5 600
+       c6 600
+       c7 600
+       c11 600;
+
+param WT:=
+       c1 244
+       c3 244
+       c4 244
+       c5 244
+       c6 244
+       c7 244
+       c11 244;
+    
+param HT:=
+		c1 260
+		c3 260
+		c4 260
+		c5 260
+		c6 260
+		c7 260
+		c11 260;
+	
+	
+param CT:=
+	 	c1 28350000
+	 	c3 28350000
+	 	c4 28350000
+	 	c5 28350000
+	 	c6 28350000
+	 	c7 28350000
+	 	c11 28350000 ;
+
+
+# Product-family assignments
+
+param e :
+            f1 f3  f4  f5  f6 f7 f11:=
+   		p1  1   0  0   0   0  0   0
+   		p2  0   1  0   0   0  0   0
+   		p3  0   1  0   0   0  0   0
+   		p4  0   1  0   0   0  0   0 
+   		p5  0   0  1   0   0  0   0 
+   		p6  0   0  0   1   0  0   0
+   		p7  0   0  0   0   1  0   0
+   		p8  0   0  0   0   0  1   0
+   		p9  0   0  0   0   0  1   0
+   		p10 0   0  0   0   0  0   1
+   		p11 0   0  0   0   0  0   1
+   		p12 0   0  0   0   0  0   1
+   		p13 0   0  0   0   0  0   1
+   		p14 0   0  0   0   0  0   1
+   		p15 0   0  0   0   0  0   1
+   		p16 0   0  0   0   0  0   1
+   		p17 0   0  0   0   0  0   1
+   		;
+param g:
+	          l1 l3 l4 l5 l6 l7 l11:=
+	    b1    1  0   0  0  0  0  0
+	    b3    0  1   0  0  0  0  0
+	    b4    0  0   1  0  0  0  0 
+	    b5    0  0   0  1  0  0  0
+	    b6    0  0   0  0  1  0  0
+	    b7    0  0   0  0  0  1  0
+	    b11   0  0   0  0  0  0  1
+	    ;
+   		
+   		
+
+	   
+# Cost and big-M
+
+param alpha := 10;  #cost per carton used
+param beta := 500; #cost per container used
+param M     := 1000000; #large constant
+param alpha_supp := 1;# minimum percentage of its bottom face supported by other items' top faces
+param epsilon :=0.001;
+
+ 
+ 
+
+
+      

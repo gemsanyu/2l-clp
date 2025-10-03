@@ -1,0 +1,9 @@
+reset;
+model CLPSingle(container).mod;
+data CLPSingle(container).dat;
+option solver gurobi;
+option gurobi_options 'iisfind=1';
+solve;
+
+print xp,yp,zp,on_floor;
+print supp;
