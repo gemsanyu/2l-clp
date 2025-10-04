@@ -97,9 +97,17 @@ var supp {p in P, pp in P} binary; #1 if p support pp
 var Zarea {p in P, pp in P} >=0;# product Lx*Ly (linearized via McCormick)
 var on_floor {P} binary;# 1 if item j sits on floor (zp = 0 in assigned carton)
 
+#Good practice to make big M as tight as possible (if possible)
+var n_fp {f in F} >=0; # num of products in family f
+
+
 #Objective Function
 
 minimize Z : alpha * sum {b in B} u[b] + beta * sum{t in T} v[t];
+
+#Prepare aux variables
+s.t. c01 {f in F}:
+    sum {p in P} e[p,f] = n_fp[f];
 
 #Carton packing Constraints
 
@@ -121,39 +129,31 @@ s.t. c17 {b in B, p in P} :
 
 s.t. c18 { b in B, p in P}:
 	zp[p] + hp[p] <= HB[b]*u[b] + M*(1-x[p,b]);
-	
-## relative positioning inside carton
-s.t. c19 {p in P, pp in P : ord (p) < ord (pp)} :
-	xp[p] + lp[p]*l_px[p] + wp[p]*w_px[p] <= xp[pp] + M*(1-xplus[p,pp]) + M*(1-ybar[p,pp]);
-	
-s.t. c110 {p in P, pp in P: ord(p) < ord (pp)} :
-	xp[pp] + lp[pp]*l_px[pp] + wp[pp]*w_px[pp] <= xp[p] + M*(1-xminus[p,pp]) + M*(1-ybar[p,pp]);
 
-s.t. c111 {p in P, pp in P : ord(p) < ord(pp)} :
-	yp[p] + lp[p]*l_py[p] +wp[p]*w_py[p] <= yp[pp] + M*(1-yplus[p,pp]) + M*(1-ybar[p,pp]);
+## record which items share the same carton
+s.t. c145 {p in P, b in B ,pp in P : p != pp}:
+	yx[p,pp,b] <= x[p,b];
 
-s.t. c112 {p in P, pp in P : ord(p) < ord(pp)}:
-	yp[pp] + lp[pp]*l_py[pp] +wp[pp]*w_py[pp] <= yp[p] +M*(1-yminus[p,pp]) + M*(1-ybar[p,pp]);
+s.t. c146 {p in P, b in B ,pp in P : p != pp}:
+	yx[p,pp,b] <= x[pp,b];
 
-s.t. c113 {p in P,pp in P : ord(p) < ord(pp)}:
-	zp[p] + hp[p] <= zp[pp] + M*(1-zplus[p,pp]) + M*(1-ybar[p,pp]);
+s.t. c147 {p in P, b in B ,pp in P :p != pp}:
+	yx[p,pp,b] >= x[p,b] + x[pp,b] - 1;
+	
+s.t. c148 {p in P, pp in P : p != pp}:
+	ybar[p,pp] = sum {b in B} yx[p,pp,b];
 
-s.t. c114 {p in P, pp in P : ord(p) < ord(pp)}:
-	zp[pp] + hp[pp] <= zp[p] + M*(1-zminus[p,pp]) + M*(1-ybar[p,pp]); 
-	
-	
-s.t. c115 { p in P, b in B ,pp in P :ord(p) < ord(pp)}:
-	xplus[p,pp] + xminus[p,pp] + yplus[p,pp] + yminus[p,pp] + zplus[p,pp] + zminus[p,pp] >=x[p,b] + x[pp,b] - 1;
-	
-s.t. c149 { p in P, pp in P :ord(p) < ord(pp)}:
-	xplus[p,pp] + xminus[p,pp] <=2*ybar[p,pp];
-	
-s.t. c150 { p in P, pp in P :ord(p) < ord(pp)}:
-	zplus[p,pp] + zminus[p,pp] <=2*ybar[p,pp];
-	
-s.t. c151 { p in P, pp in P :ord(p) < ord(pp)}:
-	yplus[p,pp] + yminus[p,pp] <=2*ybar[p,pp];
-	
+## ensure only products of same family share carton
+s.t. c120 {b in B} :
+     sum {f in F} q[b,f] <= u[b];
+s.t. c121 { b in B, f in F} :
+	sum {p in P} e[p,f]*x[p,b] <= n_fp[f]*q[b,f];
+s.t. c122 { b in B, f in F} :
+	q[b,f] <= sum {p in P} e[p,f]*x[p,b];
+s.t. c123 {p in P, pp in P :ord(p) < ord(pp)}:
+	sum{f in F} e[p,f]*e[pp, f] >= 1 - M*(1-ybar[p,pp]);
+
+## product rotation in carton
 s.t.  c116 {p in P} :
 	l_px[p] + l_py[p] = 1;
 
@@ -166,68 +166,82 @@ s.t. c118 {p in P}:
 s.t. c119 {p in P} :
 	l_py[p] + w_py[p] = 1;
 
-s.t. c120 {b in B} :
-     sum {f in F} q[b,f] <= u[b];
-s.t. c121 { b in B, f in F} :
-	sum {p in P} e[p,f]*x[p,b] <= M*q[b,f];
-s.t. c122 { b in B, f in F} :
-	q[b,f] <= sum {p in P} e[p,f]*x[p,b];
 
+## relative positioning inside carton
+s.t. c19 {p in P, pp in P : p != pp} :
+	xp[p] + lp[p]*l_px[p] + wp[p]*w_px[p] <= xp[pp] + M*(1-xplus[p,pp]) + M*(1-ybar[p,pp]);
 
+s.t. c19a {p in P, pp in P : p != pp} :
+	xp[p] + lp[p]*l_px[p] + wp[p]*w_px[p] <= xp[pp] + M*(1-xminus[pp,p]) + M*(1-ybar[p,pp]);
+	
+s.t. c111 {p in P, pp in P : p != pp} :
+	yp[p] + lp[p]*l_py[p] +wp[p]*w_py[p] <= yp[pp] + M*(1-yplus[p,pp]) + M*(1-ybar[p,pp]);
+
+s.t. c111a {p in P, pp in P : p != pp} :
+	yp[p] + lp[p]*l_py[p] +wp[p]*w_py[p] <= yp[pp] + M*(1-yminus[pp,p]) + M*(1-ybar[p,pp]);
+
+s.t. c113 {p in P,pp in P : p != pp}:
+	zp[p] + hp[p] <= zp[pp] + M*(1-zplus[p,pp]) + M*(1-ybar[p,pp]);
+	
+s.t. c113a {p in P,pp in P : p != pp}:
+	zp[p] + hp[p] <= zp[pp] + M*(1-zminus[pp,p]) + M*(1-ybar[p,pp]);
+	
+s.t. c115 { p in P, b in B ,pp in P : p != pp}:
+	xplus[p,pp] + xminus[p,pp] + yplus[p,pp] + yminus[p,pp] + zplus[p,pp] + zminus[p,pp] >= ybar[p, pp];
+	
+s.t. c149 { p in P, pp in P : p != pp}:
+	xplus[p,pp] + xminus[p,pp] <=2*ybar[p,pp];
+	
+s.t. c150 { p in P, pp in P : p != pp}:
+	zplus[p,pp] + zminus[p,pp] <=2*ybar[p,pp];
+	
+s.t. c151 { p in P, pp in P : p != pp}:
+	yplus[p,pp] + yminus[p,pp] <=2*ybar[p,pp];
+	
 # To make the zp start the coordinate from 0
-s.t. c129  {b in B, p in P}:
-	zp[p] <= HB[b]*(1-on_floor[p]);
+# s.t. c129  {b in B, p in P}:
+# 	zp[p] <= HB[b]*(1-on_floor[p]);
 
-s.t. c141  {p in P}:
-	zp[p] > epsilon*(1-on_floor[p]) - on_floor[p]*M;
+# s.t. c141  {p in P}:
+# 	zp[p] > epsilon*(1-on_floor[p]) - on_floor[p]*M;
 
-s.t. c130 {p in P, b in B ,pp in P :ord(p) < ord(pp)}:
-	on_floor[pp] >= 1- supp[p,pp];
+# s.t. c130 {p in P, b in B ,pp in P :ord(p) < ord(pp)}:
+# 	on_floor[pp] >= 1- supp[p,pp];
 
 	 
 #s.t. c142 {p in P, b in B ,pp in P :ord(p) < ord(pp)}:
 	#supp[p,pp] >= x[p,b] +x[pp,b]-1;
  
-s.t. c143 {p in P, pp in P :ord(p) < ord(pp)}:
-	supp[p,pp] <= zplus[p,pp];
+# s.t. c143 {p in P, pp in P :ord(p) < ord(pp)}:
+# 	supp[p,pp] <= zplus[p,pp];
 	
-s.t. c145 {p in P, b in B ,pp in P :ord(p) < ord(pp)}:
-	yx[p,pp,b] <= x[p,b];
-
-s.t. c146 {p in P, b in B ,pp in P :ord(p) < ord(pp)}:
-	yx[p,pp,b] <= x[pp,b];
-	
-s.t. c147 {p in P, b in B ,pp in P :ord(p) < ord(pp)}:
-	yx[p,pp,b] >= x[p,b] + x[pp,b] - 1;
-	
-s.t. c148 {p in P, pp in P :ord(p) < ord(pp)}:
-	ybar[p,pp] = sum {b in B} yx[p,pp,b];
 
 
-s.t. c132 {b in B,p in P, pp in P : ord (p) < ord (pp)} :
-   lx[p,pp] <= xp[p] + lp[p]*l_px[p] + wp[p]*w_px[p]- xp[pp]+LB[b]*u[b]*(1-supp[p,pp]);
+
+# s.t. c132 {b in B,p in P, pp in P : ord (p) < ord (pp)} :
+#    lx[p,pp] <= xp[p] + lp[p]*l_px[p] + wp[p]*w_px[p]- xp[pp]+LB[b]*u[b]*(1-supp[p,pp]);
    
-s.t. c133 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
-   lx[p,pp] <= xp[pp] + lp[pp]*l_px[pp] + wp[pp]*w_px[pp]- xp[p] + LB[b]*u[b]*(1-supp[p,pp]);
+# s.t. c133 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
+#    lx[p,pp] <= xp[pp] + lp[pp]*l_px[pp] + wp[pp]*w_px[pp]- xp[p] + LB[b]*u[b]*(1-supp[p,pp]);
    
-s.t. c134 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
-   wy[p,pp] <= yp[p] + lp[p]*l_py[p] +wp[p]*w_py[p]- yp[pp] +  WB[b]*u[b]*(1-supp[p,pp]);
+# s.t. c134 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
+#    wy[p,pp] <= yp[p] + lp[p]*l_py[p] +wp[p]*w_py[p]- yp[pp] +  WB[b]*u[b]*(1-supp[p,pp]);
 
-s.t. c135 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
-   wy[p,pp] <= yp[pp] + lp[pp]*l_py[pp] +wp[pp]*w_py[pp]- yp[p] +  WB[b]*u[b]*(1-supp[p,pp]);
+# s.t. c135 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
+#    wy[p,pp] <= yp[pp] + lp[pp]*l_py[pp] +wp[pp]*w_py[pp]- yp[p] +  WB[b]*u[b]*(1-supp[p,pp]);
 
-s.t. c136 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
- Zarea[p,pp] <= LB[b]*u[b]*wy[p,pp] ;
+# s.t. c136 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
+#  Zarea[p,pp] <= LB[b]*u[b]*wy[p,pp] ;
 
-s.t. c137 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
- Zarea[p,pp] <= WB[b]*u[b]*lx[p,pp] ;
+# s.t. c137 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
+#  Zarea[p,pp] <= WB[b]*u[b]*lx[p,pp] ;
  
-s.t. c138 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
- Zarea[p,pp] >= LB[b]*u[b]*wy[p,pp]+ WB[b]*u[b]*lx[p,pp]-LB[b]*u[b]*WB[b]*u[b];
+# s.t. c138 {b in B , p in P, pp in P : ord (p) < ord (pp)} :
+#  Zarea[p,pp] >= LB[b]*u[b]*wy[p,pp]+ WB[b]*u[b]*lx[p,pp]-LB[b]*u[b]*WB[b]*u[b];
 
 
 
-s.t. c140 {b in B ,p in P, pp in P: ord(p) < ord(pp)}:
-sum {r in P} Zarea[r,pp]>= alpha_supp*(lp[pp]*l_px[pp] + wp[pp]*w_px[pp])*(lp[pp]*l_py[pp] +wp[pp]*w_py[pp]) * x[pp,b]*supp[p,pp];
+# s.t. c140 {b in B ,p in P, pp in P: ord(p) < ord(pp)}:
+# sum {r in P} Zarea[r,pp]>= alpha_supp*(lp[pp]*l_px[pp] + wp[pp]*w_px[pp])*(lp[pp]*l_py[pp] +wp[pp]*w_py[pp]) * x[pp,b]*supp[p,pp];
 
  

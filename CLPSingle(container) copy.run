@@ -1,0 +1,11 @@
+reset;
+model CLPSingle(container).mod;
+data CLPSingle(container).dat;
+option solver gurobi;
+option gurobi_options 'iisfind=1 outlev=1';
+solve > "log.txt";
+
+print "l_px, l_py, w_px, w_py:" > "log.txt";
+for {p in P}{
+    printf "%d: %f %f %f %f", p, l_px[p], l_py[p], w_px[p], w_py[p] > "log.txt";
+}

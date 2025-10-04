@@ -2,8 +2,63 @@ reset;
 model CLPSingle(container).mod;
 data CLPSingle(container).dat;
 option solver gurobi;
-option gurobi_options 'iisfind=1';
-solve;
+option gurobi_options 'iisfind=1 outlev=1';
+solve > "log.txt";
 
-print xp,yp,zp,on_floor;
-print supp;
+print "lp, wp, hp: begin" > "log.txt";
+for {p in P}{
+    printf "%d: %d %d %d\n", p, lp[p], wp[p], hp[p] > "log.txt";
+}
+print "lp, wp, hp: end"> "log.txt";
+
+print "LB, WB, HB: begin" > "log.txt";
+for {b in B}{
+    printf "%d: %d %d %d\n", b, LB[b], WB[b], HB[b] > "log.txt";
+}
+print "LB, WB, HB: end"> "log.txt";
+
+print "l_px, l_py, w_px, w_py: begin" > "log.txt";
+for {p in P}{
+    printf "%d: %d %d %d %d\n", p, l_px[p], l_py[p], w_px[p], w_py[p] > "log.txt";
+}
+print "l_px, l_py, w_px, w_py: end"> "log.txt";
+
+print "xp, yp, zp, on_floor: begin" > "log.txt";
+for {p in P}{
+    printf "%d: %f %f %f %d\n", p, xp[p], yp[p], zp[p], on_floor[p] > "log.txt";
+}
+print "xp, yp, zp, on_floor: end"> "log.txt";
+
+param fam {P};
+for {p in P}{
+    for {f in F}{
+        if e[p,f] then {
+            let fam[p]:= f;
+            break;
+        }
+    }
+}
+print "product (family)->carton: begin" > "log.txt";
+for {p in P}{
+    for {b in B}{
+        if x[p,b] then {
+            printf "%d (%d) -> %d\n", p, fam[p], b > "log.txt";
+            break;
+        }
+    }
+}
+print "product (family)->carton: end"> "log.txt";
+
+print "ybar:" > "log.txt";
+for {p in P}{
+    printf "\t%d", p >> "log.txt";
+}
+printf "\n" >> "log.txt";
+for {p in P}{
+    printf "%d:", p >> "log.txt";
+    for {pp in P}{
+        printf "\t%d", ybar[p,pp] >> "log.txt";
+    }
+    printf "\n" >> "log.txt";
+}
+print "ybar: end"> "log.txt";
