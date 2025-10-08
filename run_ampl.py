@@ -1,4 +1,6 @@
-import re
+import multiprocessing as mp
+import os
+import secrets
 import subprocess
 from typing import List
 
@@ -7,12 +9,13 @@ import plotly.graph_objects as go
 from box import Box, Carton, get_cartons, get_products
 
 
-def visualize(carton: Carton, products: List[Box]):
-    """Visualize a carton and the products inside it in 3D."""
+def visualize(carton: Carton, products: List[Box], output_dir: str = "figs"):
+    """Save a 3D visualization of a carton and its products into an output folder."""
     # Skip empty cartons
-    if len(carton.products)==0:
+    if len(carton.products) == 0:
         return
-
+    os.makedirs(output_dir, exist_ok=True)
+    print(f"Figures saved to {output_dir}")
     fig = go.Figure()
 
     # --- Draw carton (transparent wireframe) ---
@@ -38,11 +41,10 @@ def visualize(carton: Carton, products: List[Box]):
     # --- Draw each product box ---
     for pi in carton.products:
         prod = products[pi]
-        # You can set prod.x, prod.y, prod.z externally if you want placement control
         x0, y0, z0 = prod.pos
         lx, wy, hz = prod.dim
         if prod.is_rotated:
-            lx, wy = prod.dim[1], prod.dim[0]
+            lx, wy = wy, lx
 
         fig.add_trace(go.Mesh3d(
             x=[x0, x0+lx, x0+lx, x0, x0, x0+lx, x0+lx, x0],
@@ -68,20 +70,26 @@ def visualize(carton: Carton, products: List[Box]):
         showlegend=False
     )
 
-    fig.show()
+    # Save figure
+    output_path = os.path.join(output_dir, f"carton_{carton.idx}.png")
+    fig.write_image(output_path, scale=2, width=800, height=600)
+    print(f"✅ Saved: {output_path}")
+
 
 def visualize_packing():
-    text: str
     with open("log.txt", "r") as f:
         text = f.read()
+
     products = get_products(text)
     cartons = get_cartons(text)
 
-    for carton in cartons:
-        visualize(carton, products)
+    suffix = secrets.token_bytes(8).hex()
+    output_dir = f"fig{suffix}"
 
-
-
+    args = [(carton, products, output_dir) for carton in cartons if len(carton.products)>0]
+    with mp.Pool(8) as p:
+        p.starmap(visualize, args)
+    
 
 def run():
     cmd_args = [

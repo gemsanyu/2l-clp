@@ -11,47 +11,48 @@ Non-default parameters:
 InfUnbdInfo  1
 
 Optimize a model with 26245 rows, 7970 columns and 100080 nonzeros
-Model fingerprint: 0x49d87aa2
+Model fingerprint: 0xabc82959
 Variable types: 51 continuous, 7919 integer (0 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+06]
   Objective range  [1e+01, 5e+02]
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 2e+06]
-Found heuristic solution: objective 170.0000000
 Presolve removed 22184 rows and 6445 columns
-Presolve time: 0.71s
+Presolve time: 0.72s
 Presolved: 4061 rows, 1525 columns, 16130 nonzeros
 Variable types: 39 continuous, 1486 integer (1486 binary)
+Found heuristic solution: objective 200.0000000
 
-Root relaxation: objective 7.000000e+01, 758 iterations, 0.03 seconds (0.03 work units)
+Root relaxation: objective 7.000000e+01, 758 iterations, 0.02 seconds (0.03 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   70.00000    0   36  170.00000   70.00000  58.8%     -    0s
+     0     0   70.00000    0   36  200.00000   70.00000  65.0%     -    0s
+H    0     0                     160.0000000   70.00000  56.3%     -    0s
 H    0     0                     130.0000000   70.00000  46.2%     -    0s
 H    0     0                     120.0000000   70.00000  41.7%     -    0s
-     0     0   70.00000    0   47  120.00000   70.00000  41.7%     -    0s
+     0     0   70.00000    0   59  120.00000   70.00000  41.7%     -    0s
 H    0     0                      90.0000000   70.00000  22.2%     -    0s
 H    0     0                      80.0000000   70.00000  12.5%     -    0s
+     0     0   70.00000    0   59   80.00000   70.00000  12.5%     -    0s
 H    0     0                      70.0000000   70.00000  0.00%     -    0s
-     0     0   70.00000    0   46   70.00000   70.00000  0.00%     -    0s
 
 Cutting planes:
-  Learned: 6
-  Gomory: 15
-  Implied bound: 34
-  MIR: 4
-  Zero half: 42
-  RLT: 60
-  Relax-and-lift: 33
-  BQP: 156
+  Learned: 5
+  Gomory: 18
+  Implied bound: 42
+  MIR: 10
+  Zero half: 64
+  RLT: 115
+  Relax-and-lift: 76
+  BQP: 234
 
-Explored 1 nodes (2314 simplex iterations) in 0.92 seconds (0.88 work units)
+Explored 1 nodes (2238 simplex iterations) in 0.94 seconds (0.91 work units)
 Thread count was 16 (of 16 available processors)
 
-Solution count 6: 70 80 90 ... 170
+Solution count 7: 70 80 90 ... 200
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 7.000000000000e+01, best bound 7.000000000000e+01, gap 0.0000%

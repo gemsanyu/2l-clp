@@ -107,7 +107,7 @@ var n_fp {f in F} >=0; # num of products in family f
 minimize Z : alpha * sum {b in B} u[b] + beta * sum{t in T} v[t];
 
 #Prepare aux variables
-s.t. c01 {f in F}:
+s.t. c01 {f in F}: #number of products in family f
     sum {p in P} e[p,f] = n_fp[f];
 
 #Carton packing Constraints
@@ -131,7 +131,7 @@ s.t. c17 {b in B, p in P} :
 s.t. c18 { b in B, p in P}:
 	zp[p] + hp[p] <= HB[b]*u[b] + M*(1-x[p,b]);
 
-## record which items share the same carton
+## record which products share the same carton
 s.t. c145 {p in P, b in B ,pp in P : p != pp}:
 	yx[p,pp,b] <= x[p,b];
 
@@ -148,7 +148,7 @@ s.t. c148 {p in P, pp in P : p != pp}:
 s.t. c120 {b in B} :
      sum {f in F} q[b,f] <= u[b];
 s.t. c121 { b in B, f in F} :
-	sum {p in P} e[p,f]*x[p,b] <= n_fp[f]*q[b,f];
+	sum {p in P} e[p,f]*x[p,b] <= M*q[b,f];
 s.t. c122 { b in B, f in F} :
 	q[b,f] <= sum {p in P} e[p,f]*x[p,b];
 s.t. c123 {p in P, pp in P :ord(p) < ord(pp)}:
