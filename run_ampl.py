@@ -87,7 +87,7 @@ def visualize_packing():
     output_dir = f"fig{suffix}"
 
     args = [(carton, products, output_dir) for carton in cartons if len(carton.products)>0]
-    with mp.Pool(8) as p:
+    with mp.Pool(1) as p:
         p.starmap(visualize, args)
     
 
