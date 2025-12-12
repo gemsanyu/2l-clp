@@ -2,7 +2,7 @@ Gurobi 12.0.3:   alg:iisfind = 1
 Set parameter LogToConsole to value 1
   tech:outlev = 1
 Set parameter InfUnbdInfo to value 1
-Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (win64 - Windows 11.0 (26100.2))
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (win64 - Windows 11+.0 (26200.2))
 
 CPU model: 12th Gen Intel(R) Core(TM) i7-12700, instruction set [SSE2|AVX|AVX2]
 Thread count: 12 physical cores, 20 logical processors, using up to 20 threads
@@ -25,7 +25,7 @@ Coefficient statistics:
 Presolve model has 13 nlconstr
 Added 117 variables to disaggregate expressions.
 Presolve removed 21082 rows and 6553 columns
-Presolve time: 1.74s
+Presolve time: 1.79s
 Presolved: 9164 rows, 2719 columns, 58286 nonzeros
 Presolved model has 64 bilinear constraint(s)
 
@@ -33,7 +33,7 @@ Solving non-convex MIQCP
 
 Variable types: 318 continuous, 2401 integer (2345 binary)
 
-Root relaxation: objective 7.000000e+01, 1762 iterations, 0.08 seconds (0.13 work units)
+Root relaxation: objective 7.000000e+01, 1762 iterations, 0.09 seconds (0.13 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
@@ -41,7 +41,7 @@ Root relaxation: objective 7.000000e+01, 1762 iterations, 0.08 seconds (0.13 wor
 H    0     0                      70.0000000   70.00000  0.00%     -    2s
      0     0   70.00000    0   38   70.00000   70.00000  0.00%     -    2s
 
-Explored 1 nodes (4291 simplex iterations) in 2.54 seconds (4.32 work units)
+Explored 1 nodes (4291 simplex iterations) in 2.59 seconds (4.32 work units)
 Thread count was 20 (of 20 available processors)
 
 Solution count 1: 70 
