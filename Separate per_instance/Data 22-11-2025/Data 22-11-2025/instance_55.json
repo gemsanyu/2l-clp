@@ -1,0 +1,538 @@
+{
+    "130446": [
+        {
+            "product_code": "HERB021",
+            "product_weight": 70.0,
+            "product_width": 5.6,
+            "product_height": 10.5,
+            "product_length": 4.5,
+            "shipped_qty": 48
+        }
+    ],
+    "130447": [
+        {
+            "product_code": "ENSU023",
+            "product_weight": 400.0,
+            "product_width": 10.0,
+            "product_height": 11.4,
+            "product_length": 10.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "ENSU026",
+            "product_weight": 1100.0,
+            "product_width": 12.7,
+            "product_height": 16.3,
+            "product_length": 12.7,
+            "shipped_qty": 12
+        },
+        {
+            "product_code": "ENSU026",
+            "product_weight": 1100.0,
+            "product_width": 12.7,
+            "product_height": 16.3,
+            "product_length": 12.7,
+            "shipped_qty": 48
+        },
+        {
+            "product_code": "ENSU026",
+            "product_weight": 1100.0,
+            "product_width": 12.7,
+            "product_height": 16.3,
+            "product_length": 12.7,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "ENSU027",
+            "product_weight": 200.0,
+            "product_width": 5.0,
+            "product_height": 18.0,
+            "product_length": 15.0,
+            "shipped_qty": 15
+        },
+        {
+            "product_code": "ENSU027",
+            "product_weight": 200.0,
+            "product_width": 5.0,
+            "product_height": 18.0,
+            "product_length": 15.0,
+            "shipped_qty": 45
+        },
+        {
+            "product_code": "ENSU027",
+            "product_weight": 200.0,
+            "product_width": 5.0,
+            "product_height": 18.0,
+            "product_length": 15.0,
+            "shipped_qty": 60
+        },
+        {
+            "product_code": "MADU020",
+            "product_weight": 300.0,
+            "product_width": 5.0,
+            "product_height": 7.5,
+            "product_length": 5.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI063",
+            "product_weight": 500.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 48
+        },
+        {
+            "product_code": "PEDI063",
+            "product_weight": 500.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 192
+        },
+        {
+            "product_code": "PEDI063",
+            "product_weight": 500.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI064",
+            "product_weight": 2040.0,
+            "product_width": 14.0,
+            "product_height": 22.0,
+            "product_length": 29.0,
+            "shipped_qty": 8
+        },
+        {
+            "product_code": "PEDI064",
+            "product_weight": 2040.0,
+            "product_width": 14.0,
+            "product_height": 22.0,
+            "product_length": 29.0,
+            "shipped_qty": 4
+        },
+        {
+            "product_code": "PEDI065",
+            "product_weight": 300.0,
+            "product_width": 15.0,
+            "product_height": 18.0,
+            "product_length": 5.0,
+            "shipped_qty": 60
+        },
+        {
+            "product_code": "PEDI066",
+            "product_weight": 1000.0,
+            "product_width": 13.0,
+            "product_height": 16.0,
+            "product_length": 13.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI066",
+            "product_weight": 1000.0,
+            "product_width": 13.0,
+            "product_height": 16.0,
+            "product_length": 13.0,
+            "shipped_qty": 312
+        },
+        {
+            "product_code": "PEDI066",
+            "product_weight": 1000.0,
+            "product_width": 13.0,
+            "product_height": 16.0,
+            "product_length": 13.0,
+            "shipped_qty": 180
+        },
+        {
+            "product_code": "PEDI067",
+            "product_weight": 500.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 72
+        },
+        {
+            "product_code": "PEDI067",
+            "product_weight": 500.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI069",
+            "product_weight": 410.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 96
+        },
+        {
+            "product_code": "PEDI069",
+            "product_weight": 410.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI070",
+            "product_weight": 1100.0,
+            "product_width": 12.8,
+            "product_height": 16.2,
+            "product_length": 12.8,
+            "shipped_qty": 576
+        },
+        {
+            "product_code": "PEDI070",
+            "product_weight": 1100.0,
+            "product_width": 12.8,
+            "product_height": 16.2,
+            "product_length": 12.8,
+            "shipped_qty": 300
+        },
+        {
+            "product_code": "PEDI071",
+            "product_weight": 410.0,
+            "product_width": 10.0,
+            "product_height": 11.4,
+            "product_length": 10.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI071",
+            "product_weight": 410.0,
+            "product_width": 10.0,
+            "product_height": 11.4,
+            "product_length": 10.0,
+            "shipped_qty": 144
+        },
+        {
+            "product_code": "PEDI071",
+            "product_weight": 410.0,
+            "product_width": 10.0,
+            "product_height": 11.4,
+            "product_length": 10.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI063",
+            "product_weight": 500.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 96
+        },
+        {
+            "product_code": "PEDI065",
+            "product_weight": 300.0,
+            "product_width": 15.0,
+            "product_height": 18.0,
+            "product_length": 5.0,
+            "shipped_qty": 300
+        }
+    ],
+    "137393": [
+        {
+            "product_code": "EXFO003",
+            "product_weight": 35.0,
+            "product_width": 2.0,
+            "product_height": 7.0,
+            "product_length": 15.0,
+            "shipped_qty": 2
+        }
+    ],
+    "137556": [
+        {
+            "product_code": "CISP004",
+            "product_weight": 28.0,
+            "product_width": 5.0,
+            "product_height": 10.3,
+            "product_length": 4.8,
+            "shipped_qty": 12
+        }
+    ],
+    "143241": [
+        {
+            "product_code": "ENSU022",
+            "product_weight": 220.0,
+            "product_width": 15.0,
+            "product_height": 5.0,
+            "product_length": 18.5,
+            "shipped_qty": 60
+        },
+        {
+            "product_code": "ENSU022",
+            "product_weight": 220.0,
+            "product_width": 15.0,
+            "product_height": 5.0,
+            "product_length": 18.5,
+            "shipped_qty": 30
+        },
+        {
+            "product_code": "ENSU024",
+            "product_weight": 200.0,
+            "product_width": 5.0,
+            "product_height": 8.0,
+            "product_length": 15.0,
+            "shipped_qty": 45
+        },
+        {
+            "product_code": "ENSU024",
+            "product_weight": 200.0,
+            "product_width": 5.0,
+            "product_height": 8.0,
+            "product_length": 15.0,
+            "shipped_qty": 30
+        },
+        {
+            "product_code": "HERB021",
+            "product_weight": 70.0,
+            "product_width": 5.6,
+            "product_height": 10.5,
+            "product_length": 4.5,
+            "shipped_qty": 48
+        },
+        {
+            "product_code": "PEDI063",
+            "product_weight": 500.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 48
+        },
+        {
+            "product_code": "PEDI064",
+            "product_weight": 2040.0,
+            "product_width": 14.0,
+            "product_height": 22.0,
+            "product_length": 29.0,
+            "shipped_qty": 4
+        },
+        {
+            "product_code": "PEDI066",
+            "product_weight": 1000.0,
+            "product_width": 13.0,
+            "product_height": 16.0,
+            "product_length": 13.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI069",
+            "product_weight": 410.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI069",
+            "product_weight": 410.0,
+            "product_width": 10.0,
+            "product_height": 11.5,
+            "product_length": 10.0,
+            "shipped_qty": 24
+        },
+        {
+            "product_code": "PEDI071",
+            "product_weight": 410.0,
+            "product_width": 10.0,
+            "product_height": 11.4,
+            "product_length": 10.0,
+            "shipped_qty": 72
+        },
+        {
+            "product_code": "PEDI072",
+            "product_weight": 1000.0,
+            "product_width": 11.0,
+            "product_height": 22.0,
+            "product_length": 18.5,
+            "shipped_qty": 9
+        },
+        {
+            "product_code": "SAFE015",
+            "product_weight": 41.0,
+            "product_width": 2.5,
+            "product_height": 9.0,
+            "product_length": 2.5,
+            "shipped_qty": 108
+        },
+        {
+            "product_code": "STIM015",
+            "product_weight": 150.0,
+            "product_width": 4.7,
+            "product_height": 12.9,
+            "product_length": 6.0,
+            "shipped_qty": 24
+        }
+    ],
+    "145540": [
+        {
+            "product_code": "RHIN003",
+            "product_weight": 60.0,
+            "product_width": 5.5,
+            "product_height": 7.0,
+            "product_length": 10.5,
+            "shipped_qty": 30
+        },
+        {
+            "product_code": "RHIN005",
+            "product_weight": 50.0,
+            "product_width": 3.5,
+            "product_height": 9.5,
+            "product_length": 6.0,
+            "shipped_qty": 10
+        },
+        {
+            "product_code": "RHIN006",
+            "product_weight": 120.0,
+            "product_width": 4.5,
+            "product_height": 11.0,
+            "product_length": 5.5,
+            "shipped_qty": 40
+        }
+    ],
+    "152730": [
+        {
+            "product_code": "FLAD006",
+            "product_weight": 38.95833333,
+            "product_width": 5.5,
+            "product_height": 2.5,
+            "product_length": 9.4,
+            "shipped_qty": 2
+        }
+    ],
+    "153479": [
+        {
+            "product_code": "ALPR002",
+            "product_weight": 51.0,
+            "product_width": 3.5,
+            "product_height": 5.5,
+            "product_length": 12.5,
+            "shipped_qty": 10
+        },
+        {
+            "product_code": "ALPR003",
+            "product_weight": 51.0,
+            "product_width": 3.5,
+            "product_height": 5.5,
+            "product_length": 12.5,
+            "shipped_qty": 10
+        },
+        {
+            "product_code": "BLDI002",
+            "product_weight": 350.0,
+            "product_width": 24.5,
+            "product_height": 5.0,
+            "product_length": 29.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "SEDA001",
+            "product_weight": 50.0,
+            "product_width": 9.0,
+            "product_height": 4.0,
+            "product_length": 10.5,
+            "shipped_qty": 10
+        }
+    ],
+    "163308": [
+        {
+            "product_code": "ZAMB001",
+            "product_weight": 50.0,
+            "product_width": 6.2,
+            "product_height": 2.3,
+            "product_length": 6.2,
+            "shipped_qty": 1
+        }
+    ],
+    "174049": [
+        {
+            "product_code": "CELE001",
+            "product_weight": 40.0,
+            "product_width": 6.0,
+            "product_height": 2.98,
+            "product_length": 8.1,
+            "shipped_qty": 1
+        }
+    ],
+    "180732": [
+        {
+            "product_code": "BIOB001",
+            "product_weight": 40.0,
+            "product_width": 3.0,
+            "product_height": 6.5,
+            "product_length": 13.0,
+            "shipped_qty": 30
+        },
+        {
+            "product_code": "ESOF002",
+            "product_weight": 30.0,
+            "product_width": 7.3,
+            "product_height": 2.5,
+            "product_length": 13.5,
+            "shipped_qty": 10
+        },
+        {
+            "product_code": "KETE002",
+            "product_weight": 40.0,
+            "product_width": 9.0,
+            "product_height": 2.0,
+            "product_length": 8.0,
+            "shipped_qty": 10
+        },
+        {
+            "product_code": "KETR001",
+            "product_weight": 12.0,
+            "product_width": 2.4,
+            "product_height": 1.8,
+            "product_length": 9.2,
+            "shipped_qty": 10
+        }
+    ],
+    "184710": [
+        {
+            "product_code": "SAFE013",
+            "product_weight": 100.1,
+            "product_width": 3.2,
+            "product_height": 11.0,
+            "product_length": 3.2,
+            "shipped_qty": 12
+        },
+        {
+            "product_code": "SAFE017",
+            "product_weight": 56.0,
+            "product_width": 2.5,
+            "product_height": 9.0,
+            "product_length": 2.5,
+            "shipped_qty": 12
+        },
+        {
+            "product_code": "SAFE018",
+            "product_weight": 100.0,
+            "product_width": 3.2,
+            "product_height": 11.0,
+            "product_length": 3.2,
+            "shipped_qty": 12
+        },
+        {
+            "product_code": "SAFE019",
+            "product_weight": 27.6,
+            "product_width": 9.5,
+            "product_height": 11.5,
+            "product_length": 11.8,
+            "shipped_qty": 12
+        },
+        {
+            "product_code": "STIM018",
+            "product_weight": 150.0,
+            "product_width": 4.8,
+            "product_height": 12.9,
+            "product_length": 6.0,
+            "shipped_qty": 6
+        }
+    ]
+}
