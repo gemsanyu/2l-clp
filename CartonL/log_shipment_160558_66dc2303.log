@@ -1,0 +1,99 @@
+Gurobi 12.0.3:   lim:time = 5000
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (win64 - Windows 11+.0 (26200.2))
+
+CPU model: 12th Gen Intel(R) Core(TM) i7-12700, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 20 logical processors, using up to 20 threads
+
+Non-default parameters:
+TimeLimit  5000
+InfUnbdInfo  1
+
+Optimize a model with 207 rows, 88 columns and 694 nonzeros
+Model fingerprint: 0x913d17bb
+Variable types: 2 continuous, 86 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  Objective range  [3e+01, 5e+02]
+  Bounds range     [1e+00, 1e+06]
+  RHS range        [1e+00, 1e+06]
+Found heuristic solution: objective 94.0000000
+Presolve removed 207 rows and 88 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 20 available processors)
+
+Solution count 2: 32 94 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.200000000000e+01, best bound 3.200000000000e+01, gap 0.0000%
+
+AMPL MP initial flat model has 88 variables (2 integer, 84 binary);
+Objectives: 1 linear; 
+Constraints:  207 linear;
+
+AMPL MP final model has 88 variables (2 integer, 84 binary);
+Objectives: 1 linear; 
+Constraints:  207 linear;
+
+
+Gurobi 12.0.3: optimal solution; objective 32
+0 simplex iterations
+lp, wp, hp: begin
+1: 10.000000 8.000000 14.500000
+lp, wp, hp: end
+LB, WB, HB: begin
+1: 28.000000 15.000000 15.000000
+2: 28.000000 15.000000 15.000000
+3: 28.000000 15.000000 15.000000
+4: 28.000000 15.000000 15.000000
+5: 28.000000 15.000000 15.000000
+6: 28.000000 15.000000 15.000000
+7: 28.000000 15.000000 15.000000
+8: 28.000000 15.000000 15.000000
+9: 28.000000 15.000000 15.000000
+10: 28.000000 15.000000 15.000000
+11: 42.000000 32.000000 26.000000
+12: 42.000000 32.000000 26.000000
+13: 42.000000 32.000000 26.000000
+14: 42.000000 32.000000 26.000000
+15: 42.000000 32.000000 26.000000
+16: 42.000000 32.000000 26.000000
+17: 42.000000 32.000000 26.000000
+18: 42.000000 32.000000 26.000000
+19: 42.000000 32.000000 26.000000
+20: 42.000000 32.000000 26.000000
+21: 45.700000 45.700000 40.600000
+22: 45.700000 45.700000 40.600000
+23: 45.700000 45.700000 40.600000
+24: 45.700000 45.700000 40.600000
+25: 45.700000 45.700000 40.600000
+26: 45.700000 45.700000 40.600000
+27: 45.700000 45.700000 40.600000
+28: 45.700000 45.700000 40.600000
+29: 45.700000 45.700000 40.600000
+30: 45.700000 45.700000 40.600000
+31: 61.000000 46.000000 61.000000
+32: 61.000000 46.000000 61.000000
+33: 61.000000 46.000000 61.000000
+34: 61.000000 46.000000 61.000000
+35: 61.000000 46.000000 61.000000
+36: 61.000000 46.000000 61.000000
+37: 61.000000 46.000000 61.000000
+38: 61.000000 46.000000 61.000000
+39: 61.000000 46.000000 61.000000
+40: 61.000000 46.000000 61.000000
+LB, WB, HB: end
+l_px, l_py, w_px, w_py: begin
+1: 0 1 1 0
+l_px, l_py, w_px, w_py: end
+xp, yp, zp, on_floor: begin
+1: 0.000000 0.000000 0.000000 1
+xp, yp, zp, on_floor: end
+product ->carton: begin
+1 -> 1
+product ->carton: end

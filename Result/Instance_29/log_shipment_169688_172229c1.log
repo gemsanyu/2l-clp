@@ -1,0 +1,179 @@
+Gurobi 12.0.3:   lim:time = 2000
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (win64 - Windows 11+.0 (26200.2))
+
+CPU model: 12th Gen Intel(R) Core(TM) i7-12700, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 20 logical processors, using up to 20 threads
+
+Non-default parameters:
+TimeLimit  2000
+InfUnbdInfo  1
+
+Optimize a model with 4368 rows, 1240 columns and 26008 nonzeros
+Model fingerprint: 0xdd836b37
+Model has 504 quadratic constraints
+Model has 64 general nonlinear constraints (160 nonlinear terms)
+Variable types: 416 continuous, 824 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  QMatrix range    [1e+00, 1e+00]
+  QLMatrix range   [1e+00, 1e+01]
+  Objective range  [3e+01, 5e+02]
+  Bounds range     [1e+00, 1e+06]
+  RHS range        [1e+00, 1e+06]
+Presolve model has 64 nlconstr
+Added 128 variables to disaggregate expressions.
+Presolve removed 872 rows and 224 columns
+Presolve time: 0.23s
+Presolved: 4960 rows, 1625 columns, 31082 nonzeros
+Presolved model has 112 SOS constraint(s)
+Presolved model has 280 bilinear constraint(s)
+
+Solving non-convex MIQCP
+
+Variable types: 833 continuous, 792 integer (736 binary)
+
+Root relaxation: objective 3.200000e+01, 674 iterations, 0.02 seconds (0.02 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   32.00000    0  137          -   32.00000      -     -    0s
+     0     0   32.00000    0  135          -   32.00000      -     -    0s
+     0     0   32.00000    0   76          -   32.00000      -     -    0s
+     0     0   32.00000    0   73          -   32.00000      -     -    0s
+H    0     0                      64.0000000   32.00000  50.0%     -    0s
+     0     0   32.00000    0   70   64.00000   32.00000  50.0%     -    0s
+     0     0   32.00000    0   23   64.00000   32.00000  50.0%     -    0s
+     0     0   32.00000    0   34   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0   53   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0    6   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0   27   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0    6   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0   19   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0    9   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0   17   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0    6   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0   23   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0    6   64.00000   32.00000  50.0%     -    1s
+     0     0   32.00000    0    6   64.00000   32.00000  50.0%     -    1s
+     0     2   32.00000    0    6   64.00000   32.00000  50.0%     -    1s
+
+Cutting planes:
+  Gomory: 1
+  Cover: 9
+  Implied bound: 3
+  Clique: 4
+  MIR: 1
+  StrongCG: 11
+  Flow cover: 18
+  Inf proof: 3
+  Zero half: 1
+  RLT: 3
+  Relax-and-lift: 9
+  PSD: 1
+
+Explored 1474 nodes (46387 simplex iterations) in 1.96 seconds (1.29 work units)
+Thread count was 20 (of 20 available processors)
+
+Solution count 1: 64 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.400000000000e+01, best bound 6.400000000000e+01, gap 0.0000%
+
+AMPL MP initial flat model has 1112 variables (24 integer, 792 binary);
+Objectives: 1 linear; 
+Constraints:  4304 linear; 632 quadratic;
+
+AMPL MP final model has 1240 variables (40 integer, 792 binary);
+Objectives: 1 linear; 
+Constraints:  4368 linear; 632 quadratic;
+
+
+Gurobi 12.0.3: optimal solution; objective 64
+46387 simplex iterations
+1474 branching nodes
+lp, wp, hp: begin
+1: 7.000000 9.000000 6.030000
+2: 7.000000 9.000000 6.030000
+3: 7.000000 9.000000 6.030000
+4: 7.000000 9.000000 6.030000
+5: 7.000000 9.000000 6.030000
+6: 7.000000 9.000000 6.030000
+7: 10.000000 8.000000 15.000000
+8: 10.000000 8.000000 15.000000
+lp, wp, hp: end
+LB, WB, HB: begin
+1: 28.000000 15.000000 15.000000
+2: 28.000000 15.000000 15.000000
+3: 28.000000 15.000000 15.000000
+4: 28.000000 15.000000 15.000000
+5: 28.000000 15.000000 15.000000
+6: 28.000000 15.000000 15.000000
+7: 28.000000 15.000000 15.000000
+8: 28.000000 15.000000 15.000000
+9: 28.000000 15.000000 15.000000
+10: 28.000000 15.000000 15.000000
+11: 42.000000 32.000000 26.000000
+12: 42.000000 32.000000 26.000000
+13: 42.000000 32.000000 26.000000
+14: 42.000000 32.000000 26.000000
+15: 42.000000 32.000000 26.000000
+16: 42.000000 32.000000 26.000000
+17: 42.000000 32.000000 26.000000
+18: 42.000000 32.000000 26.000000
+19: 42.000000 32.000000 26.000000
+20: 42.000000 32.000000 26.000000
+21: 45.700000 45.700000 40.600000
+22: 45.700000 45.700000 40.600000
+23: 45.700000 45.700000 40.600000
+24: 45.700000 45.700000 40.600000
+25: 45.700000 45.700000 40.600000
+26: 45.700000 45.700000 40.600000
+27: 45.700000 45.700000 40.600000
+28: 45.700000 45.700000 40.600000
+29: 45.700000 45.700000 40.600000
+30: 45.700000 45.700000 40.600000
+31: 61.000000 46.000000 61.000000
+32: 61.000000 46.000000 61.000000
+33: 61.000000 46.000000 61.000000
+34: 61.000000 46.000000 61.000000
+35: 61.000000 46.000000 61.000000
+36: 61.000000 46.000000 61.000000
+37: 61.000000 46.000000 61.000000
+38: 61.000000 46.000000 61.000000
+39: 61.000000 46.000000 61.000000
+40: 61.000000 46.000000 61.000000
+LB, WB, HB: end
+l_px, l_py, w_px, w_py: begin
+1: 1 0 0 1
+2: 0 1 1 0
+3: 0 1 1 0
+4: 0 1 1 0
+5: 0 1 1 0
+6: 0 1 1 0
+7: 0 1 1 0
+8: 0 1 1 0
+l_px, l_py, w_px, w_py: end
+xp, yp, zp, on_floor: begin
+1: 10.000000 0.000000 0.000000 1
+2: 1.000000 7.000000 0.000000 1
+3: 0.000000 7.000000 0.000000 1
+4: 0.000000 0.000000 0.000000 1
+5: 0.000000 0.000000 0.000000 1
+6: 17.000000 0.000000 0.000000 1
+7: 9.000000 1.000000 0.000000 1
+8: 17.000000 0.000000 0.000000 1
+xp, yp, zp, on_floor: end
+product ->carton: begin
+1 -> 8
+2 -> 8
+3 -> 1
+4 -> 8
+5 -> 1
+6 -> 1
+7 -> 1
+8 -> 8
+product ->carton: end

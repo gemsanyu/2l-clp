@@ -1,0 +1,52 @@
+reset;
+model Carton_Heterogeneousv1.mod;
+data $DATA_FILE$;  # <-- This is the placeholder
+#option solver baron;
+option solver gurobi;
+option gurobi_options "timelim= 5000 outlev=1";
+solve;
+
+# --- Print Solution Data for Python Parser (No Redirection) ---
+
+# 1. Product Dimensions (lp, wp, hp)
+print "lp, wp, hp: begin";
+for {p in P} {
+    # Using %f for float output
+    printf "%d: %f %f %f\n", p, lp[p], wp[p], hp[p];
+}
+print "lp, wp, hp: end";
+
+# 2. Carton Dimensions (LB, WB, HB)
+print "LB, WB, HB: begin";
+for {b in B} {
+    printf "%d: %f %f %f\n", b, LB[b], WB[b], HB[b];
+}
+print "LB, WB, HB: end";
+
+# 3. Rotation/Orientation (l_px, l_py, w_px, w_py)
+print "l_px, l_py, w_px, w_py: begin";
+for {p in P} {
+    printf "%d: %d %d %d %d\n", p, l_px[p], l_py[p], w_px[p], w_py[p];
+}
+print "l_px, l_py, w_px, w_py: end";
+
+# 4. Product Positions (xp, yp, zp, on_floor)
+print "xp, yp, zp, on_floor: begin";
+for {p in P} {
+    printf "%d: %f %f %f %d\n", p, xp[p], yp[p], zp[p], on_floor[p];
+}
+print "xp, yp, zp, on_floor: end";
+
+# 5. Product-to-Carton Assignment (The crucial map)
+print "product ->carton: begin";
+for {p in P} {
+    for {b in B} {
+        if x[p,b] then {
+            # Format expected by Python parser: product_id (family_id) -> carton_id
+            # We use '1' as a dummy family ID, and 'b' is the assigned carton index.
+            printf "%d -> %d\n", p, b; 
+            break;
+        }
+    }
+}
+print "product ->carton: end";

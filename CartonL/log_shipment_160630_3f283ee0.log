@@ -1,0 +1,131 @@
+Gurobi 12.0.3:   lim:time = 5000
+Set parameter LogToConsole to value 1
+  tech:outlev = 1
+Set parameter InfUnbdInfo to value 1
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (win64 - Windows 11+.0 (26200.2))
+
+CPU model: 12th Gen Intel(R) Core(TM) i7-12700, instruction set [SSE2|AVX|AVX2]
+Thread count: 12 physical cores, 20 logical processors, using up to 20 threads
+
+Non-default parameters:
+TimeLimit  5000
+InfUnbdInfo  1
+
+Optimize a model with 1356 rows, 416 columns and 7200 nonzeros
+Model fingerprint: 0x3006ff4f
+Model has 108 quadratic constraints
+Model has 16 general nonlinear constraints (48 nonlinear terms)
+Variable types: 99 continuous, 317 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+06]
+  QMatrix range    [1e+00, 1e+00]
+  QLMatrix range   [1e+00, 1e+01]
+  Objective range  [3e+01, 5e+02]
+  Bounds range     [1e+00, 1e+06]
+  RHS range        [1e+00, 1e+06]
+Presolve model has 16 nlconstr
+Added 48 variables to disaggregate expressions.
+Presolve removed 224 rows and 44 columns
+Presolve time: 0.05s
+Presolved: 1496 rows, 533 columns, 7444 nonzeros
+Presolved model has 24 SOS constraint(s)
+Presolved model has 60 bilinear constraint(s)
+
+Solving non-convex MIQCP
+
+Variable types: 205 continuous, 328 integer (300 binary)
+
+Root relaxation: objective 3.200000e+01, 258 iterations, 0.00 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                      32.0000000   32.00000  0.00%     -    0s
+     0     0   32.00000    0    5   32.00000   32.00000  0.00%     -    0s
+
+Explored 1 nodes (325 simplex iterations) in 0.14 seconds (0.17 work units)
+Thread count was 20 (of 20 available processors)
+
+Solution count 1: 32 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.200000000000e+01, best bound 3.200000000000e+01, gap 0.0000%
+
+AMPL MP initial flat model has 384 variables (12 integer, 304 binary);
+Objectives: 1 linear; 
+Constraints:  1340 linear; 140 quadratic;
+
+AMPL MP final model has 416 variables (14 integer, 304 binary);
+Objectives: 1 linear; 
+Constraints:  1356 linear; 140 quadratic;
+
+
+Gurobi 12.0.3: optimal solution; objective 32
+325 simplex iterations
+1 branching node
+lp, wp, hp: begin
+1: 4.500000 5.600000 10.500000
+2: 4.500000 5.600000 10.500000
+3: 4.500000 5.600000 10.500000
+4: 10.000000 8.000000 15.000000
+lp, wp, hp: end
+LB, WB, HB: begin
+1: 28.000000 15.000000 15.000000
+2: 28.000000 15.000000 15.000000
+3: 28.000000 15.000000 15.000000
+4: 28.000000 15.000000 15.000000
+5: 28.000000 15.000000 15.000000
+6: 28.000000 15.000000 15.000000
+7: 28.000000 15.000000 15.000000
+8: 28.000000 15.000000 15.000000
+9: 28.000000 15.000000 15.000000
+10: 28.000000 15.000000 15.000000
+11: 42.000000 32.000000 26.000000
+12: 42.000000 32.000000 26.000000
+13: 42.000000 32.000000 26.000000
+14: 42.000000 32.000000 26.000000
+15: 42.000000 32.000000 26.000000
+16: 42.000000 32.000000 26.000000
+17: 42.000000 32.000000 26.000000
+18: 42.000000 32.000000 26.000000
+19: 42.000000 32.000000 26.000000
+20: 42.000000 32.000000 26.000000
+21: 45.700000 45.700000 40.600000
+22: 45.700000 45.700000 40.600000
+23: 45.700000 45.700000 40.600000
+24: 45.700000 45.700000 40.600000
+25: 45.700000 45.700000 40.600000
+26: 45.700000 45.700000 40.600000
+27: 45.700000 45.700000 40.600000
+28: 45.700000 45.700000 40.600000
+29: 45.700000 45.700000 40.600000
+30: 45.700000 45.700000 40.600000
+31: 61.000000 46.000000 61.000000
+32: 61.000000 46.000000 61.000000
+33: 61.000000 46.000000 61.000000
+34: 61.000000 46.000000 61.000000
+35: 61.000000 46.000000 61.000000
+36: 61.000000 46.000000 61.000000
+37: 61.000000 46.000000 61.000000
+38: 61.000000 46.000000 61.000000
+39: 61.000000 46.000000 61.000000
+40: 61.000000 46.000000 61.000000
+LB, WB, HB: end
+l_px, l_py, w_px, w_py: begin
+1: 0 1 1 0
+2: 0 1 1 0
+3: 0 1 1 0
+4: 1 0 0 1
+l_px, l_py, w_px, w_py: end
+xp, yp, zp, on_floor: begin
+1: 6.000000 9.000000 0.000000 1
+2: 0.000000 9.000000 0.000000 1
+3: 10.000000 0.000000 0.000000 1
+4: 0.000000 0.000000 0.000000 1
+xp, yp, zp, on_floor: end
+product ->carton: begin
+1 -> 9
+2 -> 9
+3 -> 9
+4 -> 9
+product ->carton: end

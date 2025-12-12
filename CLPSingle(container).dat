@@ -2,8 +2,7 @@
 set P := 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17; 
 set B:= 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 ;
 set F := 1 2 3 4 5 6 7;
-set T := c1 c3 c4 c5 c6 c7 c11;
-set L :=l1 l3 l4 l5 l6 l7 l11;
+
 #Product dimensions (cm) & weight (gram)
 param WG :=
 1   500
@@ -182,44 +181,6 @@ param CB :=
 20  5000
 ;
 
-# Container dimension (cm) & capacity (gram)
-param LT:=
-       c1 600
-       c3 600
-       c4 600
-       c5 600
-       c6 600
-       c7 600
-       c11 600;
-
-param WT:=
-       c1 244
-       c3 244
-       c4 244
-       c5 244
-       c6 244
-       c7 244
-       c11 244;
-    
-param HT:=
-		c1 260
-		c3 260
-		c4 260
-		c5 260
-		c6 260
-		c7 260
-		c11 260;
-	
-	
-param CT:=
-	 	c1 28350000
-	 	c3 28350000
-	 	c4 28350000
-	 	c5 28350000
-	 	c6 28350000
-	 	c7 28350000
-	 	c11 28350000 ;
-
 
 # Product-family assignments
 
@@ -244,28 +205,13 @@ param e :
 17  0   0   0   0   0   0   1
 ;
 
-param g:
-	          l1 l3 l4 l5 l6 l7 l11:=
-	    b1    1  0   0  0  0  0  0
-	    b3    0  1   0  0  0  0  0
-	    b4    0  0   1  0  0  0  0 
-	    b5    0  0   0  1  0  0  0
-	    b6    0  0   0  0  1  0  0
-	    b7    0  0   0  0  0  1  0
-	    b11   0  0   0  0  0  0  1
-	    ;
-   		
-   		
 
 	   
 # Cost and big-M
 
 param alpha := 10;  #cost per carton used
-param beta := 500; #cost per container used
 param M     := 1000000; #large constant
 param alpha_supp := 1;# minimum percentage of its bottom face supported by other items' top faces
-param epsilon :=0.001;
-
  
  
 
