@@ -1,0 +1,302 @@
+{
+    "112852": [
+        {
+            "product_code": "GOLD016",
+            "product_weight": 45.0,
+            "product_width": 2.0,
+            "product_height": 8.5,
+            "product_length": 5.5,
+            "shipped_qty": 6
+        },
+        {
+            "product_code": "YOUV020",
+            "product_weight": 145.0,
+            "product_width": 7.0,
+            "product_height": 20.0,
+            "product_length": 12.0,
+            "shipped_qty": 6
+        },
+        {
+            "product_code": "YOUV022",
+            "product_weight": 225.0,
+            "product_width": 8.0,
+            "product_height": 15.0,
+            "product_length": 10.0,
+            "shipped_qty": 2
+        },
+        {
+            "product_code": "YOUV023",
+            "product_weight": 145.0,
+            "product_width": 7.0,
+            "product_height": 20.0,
+            "product_length": 12.0,
+            "shipped_qty": 12
+        }
+    ],
+    "112890": [
+        {
+            "product_code": "HERB021",
+            "product_weight": 70.0,
+            "product_width": 5.6,
+            "product_height": 10.5,
+            "product_length": 4.5,
+            "shipped_qty": 3
+        },
+        {
+            "product_code": "STIM015",
+            "product_weight": 150.0,
+            "product_width": 4.7,
+            "product_height": 12.9,
+            "product_length": 6.0,
+            "shipped_qty": 3
+        }
+    ],
+    "112947": [
+        {
+            "product_code": "HERB021",
+            "product_weight": 70.0,
+            "product_width": 5.6,
+            "product_height": 10.5,
+            "product_length": 4.5,
+            "shipped_qty": 3
+        }
+    ],
+    "144195": [
+        {
+            "product_code": "HERB021",
+            "product_weight": 70.0,
+            "product_width": 5.6,
+            "product_height": 10.5,
+            "product_length": 4.5,
+            "shipped_qty": 3
+        }
+    ],
+    "145555": [
+        {
+            "product_code": "GOLD002",
+            "product_weight": 150.0,
+            "product_width": 9.0,
+            "product_height": 6.03,
+            "product_length": 7.0,
+            "shipped_qty": 6
+        },
+        {
+            "product_code": "GOLD014",
+            "product_weight": 45.0,
+            "product_width": 2.0,
+            "product_height": 8.5,
+            "product_length": 5.5,
+            "shipped_qty": 6
+        },
+        {
+            "product_code": "GOLD016",
+            "product_weight": 45.0,
+            "product_width": 2.0,
+            "product_height": 8.5,
+            "product_length": 5.5,
+            "shipped_qty": 6
+        },
+        {
+            "product_code": "YOUV022",
+            "product_weight": 225.0,
+            "product_width": 8.0,
+            "product_height": 15.0,
+            "product_length": 10.0,
+            "shipped_qty": 2
+        },
+        {
+            "product_code": "YOUV023",
+            "product_weight": 145.0,
+            "product_width": 7.0,
+            "product_height": 20.0,
+            "product_length": 12.0,
+            "shipped_qty": 6
+        }
+    ],
+    "157376": [
+        {
+            "product_code": "YOUV007",
+            "product_weight": 168.0,
+            "product_width": 8.0,
+            "product_height": 14.5,
+            "product_length": 10.0,
+            "shipped_qty": 4
+        },
+        {
+            "product_code": "YOUV013",
+            "product_weight": 65.0,
+            "product_width": 10.0,
+            "product_height": 3.5,
+            "product_length": 16.0,
+            "shipped_qty": 12
+        },
+        {
+            "product_code": "YOUV019",
+            "product_weight": 225.0,
+            "product_width": 8.0,
+            "product_height": 15.0,
+            "product_length": 10.0,
+            "shipped_qty": 2
+        },
+        {
+            "product_code": "YOUV020",
+            "product_weight": 145.0,
+            "product_width": 7.0,
+            "product_height": 20.0,
+            "product_length": 12.0,
+            "shipped_qty": 12
+        },
+        {
+            "product_code": "YOUV022",
+            "product_weight": 225.0,
+            "product_width": 8.0,
+            "product_height": 15.0,
+            "product_length": 10.0,
+            "shipped_qty": 2
+        },
+        {
+            "product_code": "YOUV023",
+            "product_weight": 145.0,
+            "product_width": 7.0,
+            "product_height": 20.0,
+            "product_length": 12.0,
+            "shipped_qty": 24
+        }
+    ],
+    "160515": [
+        {
+            "product_code": "RICO009",
+            "product_weight": 100.0,
+            "product_width": 7.7,
+            "product_height": 4.6,
+            "product_length": 7.7,
+            "shipped_qty": 12
+        }
+    ],
+    "160558": [
+        {
+            "product_code": "YOUV007",
+            "product_weight": 168.0,
+            "product_width": 8.0,
+            "product_height": 14.5,
+            "product_length": 10.0,
+            "shipped_qty": 1
+        }
+    ],
+    "160630": [
+        {
+            "product_code": "HERB021",
+            "product_weight": 70.0,
+            "product_width": 5.6,
+            "product_height": 10.5,
+            "product_length": 4.5,
+            "shipped_qty": 3
+        },
+        {
+            "product_code": "YOUV022",
+            "product_weight": 225.0,
+            "product_width": 8.0,
+            "product_height": 15.0,
+            "product_length": 10.0,
+            "shipped_qty": 1
+        }
+    ],
+    "163822": [
+        {
+            "product_code": "FISH001",
+            "product_weight": 30.0,
+            "product_width": 6.5,
+            "product_height": 1.5,
+            "product_length": 10.0,
+            "shipped_qty": 6
+        },
+        {
+            "product_code": "RICO013",
+            "product_weight": 25.0,
+            "product_width": 4.1,
+            "product_height": 1.7,
+            "product_length": 7.1,
+            "shipped_qty": 10
+        },
+        {
+            "product_code": "RICO014",
+            "product_weight": 25.0,
+            "product_width": 4.1,
+            "product_height": 1.7,
+            "product_length": 7.1,
+            "shipped_qty": 10
+        }
+    ],
+    "164145": [
+        {
+            "product_code": "HERB021",
+            "product_weight": 70.0,
+            "product_width": 5.6,
+            "product_height": 10.5,
+            "product_length": 4.5,
+            "shipped_qty": 3
+        },
+        {
+            "product_code": "SAFE015",
+            "product_weight": 41.0,
+            "product_width": 2.5,
+            "product_height": 9.0,
+            "product_length": 2.5,
+            "shipped_qty": 12
+        }
+    ],
+    "164316": [
+        {
+            "product_code": "FISH016",
+            "product_weight": 20.0,
+            "product_width": 7.0,
+            "product_height": 1.0,
+            "product_length": 11.0,
+            "shipped_qty": 12
+        },
+        {
+            "product_code": "RICO010",
+            "product_weight": 100.0,
+            "product_width": 7.7,
+            "product_height": 4.6,
+            "product_length": 7.7,
+            "shipped_qty": 12
+        },
+        {
+            "product_code": "RICO014",
+            "product_weight": 25.0,
+            "product_width": 4.1,
+            "product_height": 1.7,
+            "product_length": 7.1,
+            "shipped_qty": 10
+        }
+    ],
+    "169688": [
+        {
+            "product_code": "GOLD002",
+            "product_weight": 150.0,
+            "product_width": 9.0,
+            "product_height": 6.03,
+            "product_length": 7.0,
+            "shipped_qty": 6
+        },
+        {
+            "product_code": "YOUV022",
+            "product_weight": 225.0,
+            "product_width": 8.0,
+            "product_height": 15.0,
+            "product_length": 10.0,
+            "shipped_qty": 2
+        }
+    ],
+    "179278": [
+        {
+            "product_code": "HERB021",
+            "product_weight": 70.0,
+            "product_width": 5.6,
+            "product_height": 10.5,
+            "product_length": 4.5,
+            "shipped_qty": 3
+        }
+    ]
+}

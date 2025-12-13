@@ -1,0 +1,192 @@
+{
+    "113604": [
+        {
+            "product_code": "REMI001",
+            "product_weight": 56.0,
+            "product_width": 4.0,
+            "product_height": 7.25,
+            "product_length": 4.0,
+            "shipped_qty": 4
+        }
+    ],
+    "136166": [
+        {
+            "product_code": "MADU014",
+            "product_weight": 377.0,
+            "product_width": 5.0,
+            "product_height": 17.0,
+            "product_length": 7.0,
+            "shipped_qty": 20
+        },
+        {
+            "product_code": "MADU019",
+            "product_weight": 910.0,
+            "product_width": 6.8,
+            "product_height": 28.7,
+            "product_length": 6.8,
+            "shipped_qty": 12
+        }
+    ],
+    "185445": [
+        {
+            "product_code": "BIOL081",
+            "product_weight": 186.6,
+            "product_width": 2.1,
+            "product_height": 1.5,
+            "product_length": 12.0,
+            "shipped_qty": 10
+        },
+        {
+            "product_code": "MATR007",
+            "product_weight": 1080.9,
+            "product_width": 8.5,
+            "product_height": 24.4,
+            "product_length": 8.5,
+            "shipped_qty": 14
+        },
+        {
+            "product_code": "MATR008",
+            "product_weight": 1080.9,
+            "product_width": 8.5,
+            "product_height": 24.4,
+            "product_length": 8.5,
+            "shipped_qty": 14
+        },
+        {
+            "product_code": "MATR041",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR044",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR045",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 14
+        },
+        {
+            "product_code": "MATR046",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR047",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR048",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR049",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 14
+        },
+        {
+            "product_code": "MATR050",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR052",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR053",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR054",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR066",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 14
+        },
+        {
+            "product_code": "MATR067",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 14
+        },
+        {
+            "product_code": "MATR068",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR070",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        },
+        {
+            "product_code": "MATR071",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 14
+        },
+        {
+            "product_code": "MATR072",
+            "product_weight": 112.5,
+            "product_width": 3.6,
+            "product_height": 18.0,
+            "product_length": 4.5,
+            "shipped_qty": 7
+        }
+    ]
+}
