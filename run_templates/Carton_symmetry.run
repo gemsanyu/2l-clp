@@ -1,0 +1,65 @@
+reset;
+
+# 1. Load Model logic
+model Carton_symmetry.mod;
+
+# 2. Define all shipment files 
+set SHIPMENTS := {
+     "shipment_112852.dat", "shipment_112890.dat", "shipment_112947.dat",
+     "shipment_144195.dat", "shipment_145555.dat", "shipment_157376.dat",
+     "shipment_160515.dat", "shipment_160558.dat", "shipment_160630.dat",
+     "shipment_163822.dat", "shipment_164145.dat", "shipment_164316.dat",
+     "shipment_169688.dat", "shipment_179278.dat"
+};
+
+# 3. Solver Configuration [cite: 17, 26, 34]
+option solver gurobi;
+option gurobi_options "timelim=2000 outlev=1";
+
+# 4. Use a persistent variable
+param total_final_boxes default 0;
+param summary_file symbolic := "all_shipments_summary.dat";
+
+# Initialize the file header
+printf "# Summary of All Boxes across All Shipments\n" > (summary_file);
+printf "param: LB WB HB total_weight :=\n" >> (summary_file);
+
+for {f in SHIPMENTS} {
+    
+    # Updated: Added Invr_b, M, and alpha_supp to the reset list
+    reset data LB, WB, HB, CB, alpha_s, WG_n, lp_n, wp_n, hp_n, 
+               Demand_p, r, P, S, B, N, Invr_b, M, alpha_supp;
+    
+    # Load shipment data [cite: 3, 11, 21, 30]
+    data (f);
+    
+    printf "\n# --- PROCESSING: %s ---\n", f;
+    solve;
+
+    if solve_result != "infeasible" then {
+        for {b in B} {
+            # Check if box was used 
+            if exists {p in P} x[p,b] > 0.5 then {
+                
+                # Increment the global count
+                let total_final_boxes := total_final_boxes + 1;
+
+                # Weights derived from WG_n and mapping r[p,n] [cite: 3, 6, 11, 15, 21, 25, 30, 33]
+                printf "  %d %10.2f %10.2f %10.2f %10.2f\n", 
+                    total_final_boxes, 
+                    LB[b], WB[b], HB[b], 
+                    sum {p in P: x[p,b] > 0.5} (sum {n in N} r[p,n] * WG_n[n]) 
+                    >> (summary_file);
+            }
+        }
+    } 
+}
+
+# 5. Finalize with EXPLICIT set B list
+printf ";\n\nset B := " >> (summary_file);
+for {i in 1..total_final_boxes} {
+    printf "%d ", i >> (summary_file);
+}
+printf ";\n" >> (summary_file);
+
+printf "\nSummary complete. total_final_boxes: %d\n", total_final_boxes;
